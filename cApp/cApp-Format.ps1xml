@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+    <ViewDefinitions>
+        <View>
+            <Name>ConfigInfo</Name>
+            <ViewSelectedBy>
+                <TypeName>Processa.Management.Automation.cApp.Configuration</TypeName>
+            </ViewSelectedBy>
+            <ListControl>
+                <ListEntries>
+                    <ListEntry>
+                        <ListItems>
+                            <ListItem>
+                                <Label>Configurado?</Label>
+                                <PropertyName>Configured</PropertyName>
+                            </ListItem>
+                            <ListItem>
+                                <Label>Archivo de configuraci&#243;n</Label>
+                                <PropertyName>AppConfig</PropertyName>
+                            </ListItem>
+                        </ListItems>
+                    </ListEntry>
+                </ListEntries>
+            </ListControl>
+        </View>
+        <View>
+            <Name>ServerDate</Name>
+            <ViewSelectedBy>
+                <TypeName>Processa.Management.Automation.cApp.ServerDate</TypeName>
+            </ViewSelectedBy>
+            <ListControl>
+                <ListEntries>
+                    <ListEntry>
+                        <ListItems>
+                            <ListItem>
+                                <Label>Fecha Del Servidor</Label>
+                                <PropertyName>ServerDate</PropertyName>
+                            </ListItem>
+                            <ListItem>
+                                <Label>Fecha Del Servidor</Label>
+                                <ScriptBlock>if(('{0:MM}' -f $_.ServerDate) -le 06){'Menos de Medio año'} else {'Mas de medio año'} </ScriptBlock>
+                            </ListItem>
+                        </ListItems>
+                    </ListEntry>
+                </ListEntries>
+            </ListControl>
+        </View>
+    </ViewDefinitions>
+</Configuration>
