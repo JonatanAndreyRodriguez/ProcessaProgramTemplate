@@ -30,7 +30,7 @@ Invoke-Plaster -TemplatePath $MyFolderTemplate -DestinationPath $MyFolderDestina
 ```
 
 --------------
-## Nombre de los Programas
+## Nombre De Programas
 
 Se decidio seguir un estandar para los nombres de los programas asi hacer que sean mas faciles de identificar:
 * Program-\<Cliente>\<Nombre Programa>
@@ -38,7 +38,7 @@ El nombre del programa deberia ser descriptivo a su funcionamiento
 #### Ejemplo : Program-MyCustomerLoadMonetary
 
 --------------
-## Actualizar Scripts de un Programa Existente
+## Actualizar Un Programa Existente
 
 Cuando se realice una modificacion a un programa existente y se modifique archivos de funciones, scripts o el programa se debe agregar una nota de actualizacion:
 
