@@ -38,11 +38,17 @@ El nombre del programa deberia ser descriptivo a su funcionamiento
 #### Ejemplo : Program-MyCustomerLoadMonetary
 
 --------------
-## Actualizar Un Programa Existente
+## Actualizar Una Funcion .ps1
 
-Cuando se realice una modificacion a un programa existente y se modifique archivos de funciones, scripts o el programa se debe agregar una nota de actualizacion:
+Cuando se realice una modificacion a un programa existente y se modifique archivos de funciones se debe agregar una nota de actualizacion:
 
-<h2 align="center"><img src="UpdateNote.png" /></h2>
+<h2 align="center"><img src="UpdateNotePs1.png" /></h2>
+--------------
+## Actualizar Un Script SQL 
+
+Cuando se realice una modificacion a un programa existente y se modifique archivos de scripts sql se debe agregar una nota de actualizacion:
+
+<h2 align="center"><img src="UpdateNoteSql.png" /></h2>
 
 [¿Qué es Plaster?](https://github.com/PowerShell/Plaster)
 
