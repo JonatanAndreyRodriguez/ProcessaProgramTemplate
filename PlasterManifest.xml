@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest
+  schemaVersion="1.0" xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>ProgramProcessaTemplate</name>
+    <id>80fa7cdb-112e-4941-ab6a-e6e7f62aa631</id>
+    <version>1.0.0</version>
+    <title>Program Processa PowerShell Template</title>
+    <description>Creates files for a PowerShell Program</description>
+    <author>jarodriguezc</author>
+    <tags>Program</tags>
+  </metadata>
+  <parameters>
+	<parameter name='ProgramName' type='text' prompt='Name of your program' default='ProgramcApp'/>
+	<parameter name='ProgramDesc' type='text' prompt='Brief description on this program' />
+	<parameter name='ProgramAuthor' type='user-fullname' prompt='Author'/>
+	<parameter name='ProgramGemini' type='text' prompt='Gemini'/>
+  </parameters>
+  <content>
+	<message>Checking required modules</message>
+	<requireModule name='PSProcessa' minimumVersion='1.14.0' message='You need to install PSProcessa module before continue.'/>
+	<requireModule name='PlatyPS' minimumVersion='0.8.0' message='You need to install PlatyPS module before continue.'/>
+
+	<message>Creating folder structure</message>
+  <file source='' destination='AdminLogs\'/>
+	<file source='' destination='cApp\'/>
+	<file source='' destination='cApp\Functions\'/>
+	<file source='' destination='cApp\SQLScripts\'/>
+
+	<message>Creating files</message>
+	<file source='PreRequirements.ps1' destination=''/>
+	
+	
+	<file source='cApp\cApp.config' destination=''/>
+	<file source='cApp\cApp-Format.ps1xml' destination=''/>
+
+	<templateFile source='Set-Configuration.ps1' destination=''/>
+	<templateFile source='cApp\cApp.psd1' destination='cApp\cApp.psd1'/>
+	<templateFile source='cApp\cApp.psm1' destination='cApp\cApp.psm1'/>
+	<templateFile source='Program-Template.ps1' destination='Program-${PLASTER_PARAM_ProgramName}.ps1'/>
+	<templateFile source='cApp\Functions\Invoke-Template.ps1' destination='cApp\Functions\Invoke-${PLASTER_PARAM_ProgramName}.ps1'/>
+	<templateFile source='cApp\SQLScripts\Get-ServerDate.sql' destination=''/>
+	<templateFile source='cApp\Functions\Get-Configuration.ps1' destination=''/>
+	<templateFile source='cApp\Functions\Get-ServerDate.ps1' destination=''/>
+	<templateFile source='cApp\Functions\Set-Configuration.ps1' destination=''/>
+	<templateFile source='cApp\Functions\Test-Configuration.ps1' destination=''/>
+	<templateFile source='cApp\Functions\Write-OutputMessage.ps1' destination=''/>
+
+	<message>Done!!!</message>
+  </content>
+</plasterManifest>
